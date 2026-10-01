@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumivolt — Launch Playbook</title>
+<meta name="description" content="The $0 launch playbook: publish, connect payments, sample products, first 10 orders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C8F135'/%3E%3Cpath d='M18 5 8 18h7l-2 9 11-14h-7l1-8z' fill='%2317140F'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="./">
+      <span class="bolt"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18 5 8 18h7l-2 9 11-14h-7l1-8z" fill="currentColor"/></svg></span>
+      Lumivolt
+    </a>
+    <nav class="main">
+      <a href="./#shop">Shop</a>
+      <a href="suppliers.html">Suppliers</a>
+      <a href="#week1">Week 1</a>
+    </nav>
+    <div class="bar-right">
+      <a class="cart-btn" href="./#shop">Back to shop</a>
+    </div>
+  </div>
+</header>
+
+<main class="doc">
+  <div class="wrap">
+    <p class="eyebrow">Operations · launch playbook</p>
+    <h1 style="font-size:2.6rem;max-width:16em">$0 to first sale, without guesswork.</h1>
+    <p class="lede">
+      This is the exact sequence to run after the store is deployed. Nothing here requires
+      money upfront: hosting is free, supplier accounts are free, payment processors charge
+      only per transaction. The only unavoidable cost is product samples — and that's the
+      best money you'll ever spend in this business.
+    </p>
+
+    <h2 id="stack">The $0 stack, as built</h2>
+    <table>
+      <thead>
+        <tr><th>Layer</th><th>What we use</th><th>Cost</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Storefront + cart + checkout flow</td><td>This static site (HTML/CSS/JS)</td><td class="mono">$0</td></tr>
+        <tr><td>Hosting</td><td>GitHub Pages (or Netlify/Cloudflare Pages)</td><td class="mono">$0</td></tr>
+        <tr><td>Payments (when live)</td><td>Stripe or PayPal — per-transaction only</td><td class="mono">2.9% + 30¢/sale</td></tr>
+        <tr><td>Suppliers</td><td>CJ / Zendrop / Spocket free tiers</td><td class="mono">$0</td></tr>
+        <tr><td>Product testing</td><td>AliExpress + DSers free plan</td><td class="mono">$0 + sample cost</td></tr>
+        <tr><td>Email (order confirmations)</td><td>Resend free tier (100 emails/day) or Gmail + filter</td><td class="mono">$0</td></tr>
+        <tr><td>Custom domain — optional, later</td><td>Any registrar (~$10–15/yr)</td><td class="mono">optional</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="week1">Week 1 — go live properly</h2>
+    <ul class="checklist" id="week1list">
+      <li><span class="box"></span><span class="txt"><b>1. Publish the store</b><small>Push these files to a GitHub repo → enable Pages (main branch, root). Live in ~2 minutes at yourname.github.io/repo. No account yet? Sign up takes 2 minutes with any email.</small></span></li>
+      <li><span class="box"></span><span class="txt"><b>2. Register supplier accounts</b><small>CJdropshipping + Zendrop first (both free, both ask only for an email). Bookmark the <a href="suppliers.html">supplier directory</a> — it maps each catalog item to its supplier line.</small></span></li>
+      <li><span class="box"></span><span class="txt"><b>3. Order samples of your first 3 SKUs</b><small>Recommended starters: EchoPods Pro, LumaRing Track, LunaOne Float Lamp. Budget ~$25–40 total including shipping. This is the entire launch investment.</small></span></li>
+      <li><span class="box"></span><span class="txt"><b>4. Open a Stripe or PayPal business account</b><small>Both are free to open and charge only per transaction. Stripe: stripe.com → "Start now". PayPal: paypal.com → business. You'll need ID verification; do it while samples ship.</small></span></li>
+      <li><span class="box"></span><span class="txt"><b>5. Time your samples</b><small>When each sample arrives: unbox on camera (this becomes your ad creative), inspect quality, and log actual delivery time vs. the supplier's promise. Delivery-time honesty is a competitive weapon.</small></span></li>
+    </ul>
+
+    <h2 id="week2">Week 2 — wire up real payments</h2>
+    <ul class="checklist" id="week2list">
+      <li><span class="box"></span><span class="txt"><b>6. Replace demo checkout with a payment link</b><small>Fastest zero-code path: create a Stripe Payment Link for each product and point each "Add" button at it. No backend needed; Stripe handles card capture, receipts, and fraud.</small></span></li>
+      <li><span class="box"></span><span class="txt"><b>7. Or drop in a static checkout</b><small>For a more integrated look: create a free <a href="https://snipcart.com" target="_blank" rel="noopener">Snipcart</a> / <a href="https://www.paypal.com/us/brc/app/merchant-manager" target="_blank" rel="noopener">PayPal static-site button</a> account and swap the demo modal for their widget. Both work on pure static hosting.</small></span></li>
+      <li><span class="box"></span><span class="txt"><b>8. Connect the supplier app</b><small>CJ's free Shopify app is the long path; the static path is their manual order form or Zendrop's fulfillment API on free tier. Each sale = one supplier PO with the customer's address.</small></span></li>
+      <li><span class="box"></span><span class="txt"><b>9. Set the order-status email loop</b><small>Stripe/PayPal send payment receipts natively. Forward the confirmation to yourself, place the supplier PO same-day, reply to the customer with the tracking number. Under 10 minutes per order at the start.</small></span></li>
+    </ul>
+
+    <h2 id="week3">Weeks 3–4 — first traffic, first signal</h2>
+    <ul class="checklist" id="week3list">
+      <li><span class="box"></span><span class="txt"><b>10. Post organic content first</b><small>Zero-budget launch: unboxing + "here's what it actually does" short videos (TikTok, Reels, Shorts) using your sample footage. The gadget niche rewards demos over ads. 3 posts/product over 2 weeks.</small></span></li>
+      <li><span class="box"></span><span class="txt"><b>11. Only then, small paid tests</b><small>If organic shows signal (views → clicks → store visits), put $5/day behind the best performer for 3 days. Kill anything under 1% CTR. Total risk: $15.</small></span></li>
+      <li><span class="box"></span><span class="txt"><b>12. Fulfill fast, communicate faster</b><small>Place each supplier PO within 24h of payment and send tracking proactively. Late tracking = disputes, and disputes are how new stores die.</small></span></li>
+      <li><span class="box"></span><span class="txt"><b>13. Watch the two metrics that matter</b><small>Gross margin per order ≥ 50% (use the <a href="#margins">margin table</a>) and delivery time vs. promise. Everything else is noise until 10+ orders/week.</small></span></li>
+    </ul>
+
+    <h2 id="margins">Margin math (grounded in 2026 category data)</h2>
+    <p>
+      Benchmark data across 221 real dropshipped products (ProductLair, 2026): median markup ~4x
+      landed cost, median gross margin ~75%, and the $25–50 price band converting best on cold traffic.
+      Electronics/gadgets average 14x markup on low-cost items but compress on anything over $25 source cost.
+      The store prices are already set in this band — the table below shows the model per SKU.
+    </p>
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Typical source cost*</th><th>Store price</th><th>Gross margin</th><th>Profit / order</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>EchoPods Pro</td><td class="mono">$8–12</td><td class="mono">$39.99</td><td class="mono">~72%</td><td class="mono">~$29</td></tr>
+        <tr><td>Voltra Charge Deck</td><td class="mono">$10–14</td><td class="mono">$34.99</td><td class="mono">~65%</td><td class="mono">~$23</td></tr>
+        <tr><td>LumaRing Track</td><td class="mono">$22–30</td><td class="mono">$89.99</td><td class="mono">~70%</td><td class="mono">~$62</td></tr>
+        <tr><td>NoxRest Wake Mask</td><td class="mono">$7–10</td><td class="mono">$29.99</td><td class="mono">~70%</td><td class="mono">~$21</td></tr>
+        <tr><td>LunaOne Float Lamp</td><td class="mono">$14–20</td><td class="mono">$49.99</td><td class="mono">~66%</td><td class="mono">~$33</td></tr>
+        <tr><td>SentryDot Plug</td><td class="mono">$5–8</td><td class="mono">$19.99</td><td class="mono">~65%</td><td class="mono">~$13</td></tr>
+        <tr><td>AirScout Mini</td><td class="mono">$12–18</td><td class="mono">$44.99</td><td class="mono">~65%</td><td class="mono">~$29</td></tr>
+        <tr><td>MemoKey AI Recorder</td><td class="mono">$22–30</td><td class="mono">$79.99</td><td class="mono">~67%</td><td class="mono">~$54</td></tr>
+        <tr><td>PixoBeam Mini</td><td class="mono">$25–35</td><td class="mono">$79.99</td><td class="mono">~60%</td><td class="mono">~$48</td></tr>
+        <tr><td>TrackTag 4-Pack</td><td class="mono">$6–9</td><td class="mono">$22.99</td><td class="mono">~65%</td><td class="mono">~$15</td></tr>
+      </tbody>
+    </table>
+    <p class="muted" style="font-size:.85rem">*Source-cost ranges are 2026 market estimates for this product class from Alibaba/AliExpress wholesale listings — confirm each against the live supplier quote before listing. Gross margin is before payment fees (~3%) and ad spend.</p>
+
+    <h2 id="limits">What "demo" means — and the honest path to "real"</h2>
+    <p>
+      This store is a complete, working storefront except for three things that legally require an account holder (you):
+    </p>
+    <ol style="line-height:1.9">
+      <li><b>Payment capture</b> — needs your Stripe/PayPal account (free, ~15 min, ID required).</li>
+      <li><b>Supplier accounts</b> — CJ/Zendrop/Spocket signups are free but must be yours, so orders and payouts bind to your identity.</li>
+      <li><b>Live product data</b> — the ten SKUs here are modeled on real 2026 product classes; before launch you confirm each against a live supplier quote and sample, then adjust price/copy if needed.</li>
+    </ol>
+    <p>
+      Everything else — catalog, cart, checkout flow, shipping rules, supplier vetting, the launch sequence — is done and in your hands.
+    </p>
+
+    <blockquote class="tip">
+      <b>Reality check:</b> no supplier on earth is "100% trusted" — CJ processes millions of orders
+      and still has bad batches. Trust is a process (sample → small orders → scale), not a platform badge.
+      The <a href="suppliers.html#scam">red-flag checklist</a> is that process, compressed.
+    </blockquote>
+
+    <p style="margin-top:40px"><a class="btn btn-primary" href="suppliers.html">← Supplier directory</a></p>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-note" style="border:none;padding:0">
+      <span>© 2026 Lumivolt — demo store operations doc.</span>
+      <span class="mono">playbook v1.0</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  document.querySelectorAll(".checklist li").forEach(li => {
+    li.addEventListener("click", () => li.classList.toggle("done"));
+  });
+})();
+</script>
+</body>
+</html>

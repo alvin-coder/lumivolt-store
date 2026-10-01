@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumivolt — Smart Gear, Honestly Priced</title>
+<meta name="description" content="Curated AI & smart gadgets. Fair prices, tracked shipping, 30-day returns.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C8F135'/%3E%3Cpath d='M18 5 8 18h7l-2 9 11-14h-7l1-8z' fill='%2317140F'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a class="logo" href="./">
+      <span class="bolt"><svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M18 5 8 18h7l-2 9 11-14h-7l1-8z" fill="currentColor"/></svg></span>
+      Lumivolt
+    </a>
+    <nav class="main">
+      <a href="suppliers.html">Suppliers</a>
+      <a href="playbook.html">Playbook</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="bar-right">
+      <button class="cart-btn" id="cartOpen" aria-label="Open cart">
+        Cart <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Curated tech · est. 2026</p>
+        <h1>Gadgets that<br>punch above<br>their price.</h1>
+        <p class="lede">
+          Ten gadgets we'd buy ourselves — translation earbuds, smart rings, levitating lamps —
+          no filler catalog, no dropship markup games. Real specs, tracked shipping, 30-day returns.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#shop">Shop the collection</a>
+          <a class="btn btn-ghost" href="suppliers.html">How we source →</a>
+        </div>
+        <ul class="chips">
+          <li>TRACKED SHIPPING</li>
+          <li>30-DAY RETURNS</li>
+          <li>SUPPORT IN 24H</li>
+        </ul>
+      </div>
+      <div class="hero-art">
+        <div class="halo"></div>
+        <svg viewBox="0 0 460 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lumivolt hero illustration: layered smart gadget cards">
+          <g transform="translate(30,58) rotate(-7)">
+            <rect x="0" y="0" width="190" height="132" rx="16" fill="#fff" stroke="#17140F" stroke-width="2"/>
+            <rect x="18" y="18" width="154" height="64" rx="10" fill="#E9EFF4"/>
+            <circle cx="95" cy="50" r="22" fill="#FAF8F2" stroke="#17140F" stroke-width="2"/>
+            <circle cx="95" cy="50" r="8" fill="#17140F"/>
+            <text x="18" y="106" font-family="monospace" font-size="13" fill="#17140F">LumaRing Track</text>
+            <text x="18" y="122" font-family="monospace" font-size="12" fill="#6F6858">$89.99</text>
+          </g>
+          <g transform="translate(210,180) rotate(4)">
+            <rect x="0" y="0" width="190" height="132" rx="16" fill="#fff" stroke="#17140F" stroke-width="2"/>
+            <rect x="18" y="18" width="154" height="64" rx="10" fill="#ECF2EC"/>
+            <rect x="52" y="30" width="86" height="40" rx="10" fill="#C8F135" stroke="#17140F" stroke-width="2"/>
+            <text x="18" y="106" font-family="monospace" font-size="13" fill="#17140F">EchoPods Pro</text>
+            <text x="18" y="122" font-family="monospace" font-size="12" fill="#6F6858">$39.99</text>
+          </g>
+          <g transform="translate(90,236) rotate(-3)">
+            <rect x="0" y="0" width="190" height="118" rx="16" fill="#fff" stroke="#17140F" stroke-width="2"/>
+            <rect x="18" y="16" width="154" height="56" rx="10" fill="#F6EDE2"/>
+            <circle cx="95" cy="44" r="18" fill="#FAF8F2" stroke="#17140F" stroke-width="2"/>
+            <circle cx="95" cy="44" r="6" fill="#C8F135" stroke="#17140F" stroke-width="2"/>
+            <text x="18" y="94" font-family="monospace" font-size="13" fill="#17140F">LunaOne Float Lamp</text>
+            <text x="18" y="110" font-family="monospace" font-size="12" fill="#6F6858">$49.99</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop" id="shop">
+    <div class="wrap">
+      <div class="shop-head">
+        <div>
+          <p class="eyebrow">The collection</p>
+          <h2>Ten picks, zero filler.</h2>
+        </div>
+        <p class="muted" style="margin:0;max-width:34em">
+          Every product here maps to a verified supplier line in our
+          <a class="link-arrow" href="suppliers.html">supplier directory</a> — so what you see is what we can actually fulfill.
+        </p>
+      </div>
+
+      <div class="filters" role="tablist" aria-label="Product filters">
+        <button class="filter active" data-f="all">All 10</button>
+        <button class="filter" data-f="audio">Audio & AI</button>
+        <button class="filter" data-f="wearables">Wearables</button>
+        <button class="filter" data-f="home">Home & light</button>
+        <button class="filter" data-f="everyday">Everyday carry</button>
+      </div>
+
+      <div class="grid" id="grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap band-grid">
+      <div class="band-item">
+        <span class="band-num">01</span>
+        <div>
+          <h3>Curated, not exploded</h3>
+          <p>Ten SKUs we can stand behind, not a 40,000-item junk catalog. If it's listed, we've validated the supplier behind it.</p>
+        </div>
+      </div>
+      <div class="band-item">
+        <span class="band-num">02</span>
+        <div>
+          <h3>Honest landed pricing</h3>
+          <p>Prices include what others hide: tracked shipping over $60, no fake countdown timers, no surprise fees at checkout.</p>
+        </div>
+      </div>
+      <div class="band-item">
+        <span class="band-num">03</span>
+        <div>
+          <h3>Support that answers</h3>
+          <p>Questions on specs, shipping or a return? You reach a human in under 24h — the same standard we hold our suppliers to.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2>Straight answers</h2>
+      <div class="faq-list">
+        <details>
+          <summary>Where do orders ship from?</summary>
+          <p>Depending on the item, from supplier warehouses in the US, EU or Asia — always with a tracking number. US-warehouse items typically arrive in 3–7 business days; items shipping from Asia average 8–15 days. The estimate for each product is shown before you pay.</p>
+        </details>
+        <details>
+          <summary>How do returns work?</summary>
+          <p>30 days from delivery, for any reason, on unopened items in original condition. If something arrives damaged or dead-on-arrival, we replace or refund — and we chase the supplier, not you. Contact support with your order number to start.</p>
+        </details>
+        <details>
+          <summary>How do I reach support?</summary>
+          <p>Email support@lumivolt.example with your order number — we reply within 24 hours. Order issues (damaged, lost, dead-on-arrival) are handled first, ahead of general questions.</p>
+        </details>
+        <details>
+          <summary>Are these products certified?</summary>
+          <p>Electrical items ship with the certifications required for the destination market (FCC/CE and similar). If a product listing ever loses its certification status with a supplier, we pull it rather than sell through it.</p>
+        </details>
+        <details>
+          <summary>What payment methods do you take?</summary>
+          <p>Card via our payment provider, plus PayPal at checkout. Payment data never touches our servers — it goes direct to the processor (Stripe/PayPal) over an encrypted connection.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="./" style="font-size:1.1rem">
+          <span class="bolt"><svg width="16" height="16" viewBox="0 0 32 32" fill="none"><path d="M18 5 8 18h7l-2 9 11-14h-7l1-8z" fill="currentColor"/></svg></span>
+          Lumivolt
+        </a>
+        <p class="muted" style="font-size:.92rem;max-width:26em;margin-top:14px">
+          A demo storefront built as a starting point for a real dropshipping operation.
+          Swap in live supplier feeds and a real payment processor to go live.
+        </p>
+        <p class="muted mono" style="font-size:.75rem;margin-top:10px">support@lumivolt.example</p>
+      </div>
+      <div>
+        <h4>Store</h4>
+        <ul>
+          <li><a href="#shop">Shop all</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#" id="footCart">Cart</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Operations</h4>
+        <ul>
+          <li><a href="suppliers.html">Supplier directory</a></li>
+          <li><a href="playbook.html">Launch playbook</a></li>
+          <li><a href="suppliers.html#scam">Scam red flags</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© 2026 Lumivolt — demo store. Product names are placeholders for real catalog items.</span>
+      <span class="mono">v1.0 · built with $0</span>
+    </div>
+  </div>
+</footer>
+
+<!-- cart drawer -->
+<div id="overlay"></div>
+<aside id="drawer" aria-label="Shopping cart" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>Your cart</h3>
+    <button class="x" id="cartClose" aria-label="Close cart">×</button>
+  </div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="totRow"><span>Subtotal</span><span class="mono" id="sumSub">$0.00</span></div>
+    <div class="totRow"><span>Shipping</span><span class="mono" id="sumShip">—</span></div>
+    <div class="totRow total"><span>Total</span><span class="mono" id="sumTot">$0.00</span></div>
+    <button class="btn btn-primary" id="checkoutBtn">Checkout →</button>
+  </div>
+</aside>
+
+<!-- checkout modal -->
+<div id="checkout" role="dialog" aria-modal="true" aria-label="Checkout">
+  <div class="co-panel">
+    <div class="co-main">
+      <div class="co-head">
+        <h3 id="coTitle">Checkout</h3>
+        <button class="x" id="coClose" aria-label="Close checkout">×</button>
+      </div>
+      <div id="coFlow">
+        <form id="coForm" novalidate>
+          <div class="field">
+            <label for="fEmail">Email (for order updates)</label>
+            <input id="fEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+            <div class="err" id="errEmail">Enter a valid email — order updates ship here.</div>
+          </div>
+          <div class="field">
+            <label for="fName">Full name</label>
+            <input id="fName" type="text" placeholder="Alex Chen" autocomplete="name" required>
+            <div class="err" id="errName">Enter your full name.</div>
+          </div>
+          <div class="field">
+            <label for="fAddr">Street address</label>
+            <input id="fAddr" type="text" placeholder="21 Circuit Lane" autocomplete="street" required>
+            <div class="err" id="errAddr">Enter your street address.</div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="fCity">City</label>
+              <input id="fCity" type="text" placeholder="Singapore" autocomplete="address-level2" required>
+              <div class="err" id="errCity">Enter your city.</div>
+            </div>
+            <div class="field">
+              <label for="fZip">Postal code</label>
+              <input id="fZip" type="text" placeholder="048583" autocomplete="postal-code" required>
+              <div class="err" id="errZip">Enter your postal code.</div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="fCountry">Country</label>
+            <select id="fCountry" autocomplete="country">
+              <option>United States</option>
+              <option>Singapore</option>
+              <option>United Kingdom</option>
+              <option>Germany</option>
+              <option>France</option>
+              <option>Australia</option>
+              <option>Canada</option>
+              <option>Malaysia</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="pay-hint">
+            <b>Demo checkout:</b> in production, a Stripe/PayPal payment element replaces this form's submit.
+            The order pipeline behind it (email confirm → supplier PO → tracking sync) is mapped in the <a href="playbook.html">playbook</a>.
+          </div>
+          <button class="btn btn-primary" type="submit" style="width:100%;margin-top:16px">Place demo order →</button>
+        </form>
+        <div class="success" id="coSuccess" hidden>
+          <div class="tick">✓</div>
+          <h3>Order confirmed</h3>
+          <div class="ordno mono" id="ordNo">#LV-000000</div>
+          <p class="muted">A confirmation email would now go out, and the order would drop into the supplier queue (see the <a href="playbook.html">ops playbook</a>).</p>
+          <button class="btn btn-ghost" id="successDone">Back to the shop</button>
+        </div>
+      </div>
+    </div>
+    <div class="co-side">
+      <h4 style="font-size:.78rem;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px">Order summary</h4>
+      <ul class="co-summary" id="coSummary"></ul>
+      <div class="totRow"><span>Subtotal</span><span class="mono" id="coSub">$0.00</span></div>
+      <div class="totRow"><span>Shipping</span><span class="mono" id="coShip">—</span></div>
+      <div class="totRow total"><span>Total</span><span class="mono" id="coTot">$0.00</span></div>
+      <p class="co-note">Shipping is free over $60. Tracked on every parcel. 30-day returns from delivery.</p>
+      <p class="co-note"><b>Late-ship policy:</b> if a supplier misses the ship window, shipping is refunded in full — automatically.</p>
+    </div>
+  </div>
+</div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="products.js"></script>
+<script>
+/* ============ Lumivolt storefront logic ============ */
+(() => {
+  const $ = s => document.querySelector(s);
+  const fmt = n => "$" + n.toFixed(2);
+  const store = localStorage;
+
+  /* ---- toast ---- */
+  let toastT;
+  const toast = msg => {
+    const t = $("#toast");
+    t.textContent = msg; t.classList.add("show");
+    clearTimeout(toastT);
+    toastT = setTimeout(() => t.classList.remove("show"), 2400);
+  };
+
+  /* ---- state ---- */
+  let cart = [];
+  try { cart = JSON.parse(store.getItem("lv_cart") || "[]"); } catch (e) { cart = []; }
+  const save = () => store.setItem("lv_cart", JSON.stringify(cart));
+  const find = id => cart.find(i => i.id === id);
+
+  /* ---- render product grid ---- */
+  const grid = $("#grid");
+  const renderGrid = (filter = "all") => {
+    const items = PRODUCTS.filter(p => filter === "all" || p.cat === filter);
+    grid.innerHTML = items.map(p => `
+      <article class="card" data-cat="${p.cat}" aria-label="${p.name}">
+        <div class="card-art" data-tint="${p.tint}">
+          ${p.badge ? `<span class="badge">${p.badge}</span>` : ""}
+          ${p.art}
+        </div>
+        <div class="card-body">
+          <span class="card-cat">${({audio:"Audio & AI",wearables:"Wearables",home:"Home & Light",everyday:"Everyday"})[p.cat]}</span>
+          <h3 class="card-name">${p.name}</h3>
+          <p class="card-line">${p.line}</p>
+          <div class="card-foot">
+            <span class="price">${fmt(p.price)}${p.was ? `<s>${fmt(p.was)}</s>` : ""}</span>
+            <button class="add" data-add="${p.id}" aria-label="Add ${p.name} to cart">Add</button>
+          </div>
+        </div>
+      </article>`).join("");
+  };
+
+  /* ---- filters ---- */
+  document.querySelectorAll(".filter").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderGrid(btn.dataset.f);
+    });
+  });
+
+  /* ---- add to cart ---- */
+  const addToCart = id => {
+    const p = PRODUCTS.find(x => x.id === id);
+    if (!p) return;
+    const row = find(id);
+    if (row) row.qty++;
+    else cart.push({ id, qty: 1 });
+    save(); renderCart();
+    toast(p.name + " added to cart");
+    openDrawer();
+  };
+  grid.addEventListener("click", e => {
+    const b = e.target.closest("[data-add]");
+    if (b) addToCart(b.dataset.add);
+  });
+
+  /* ---- cart math ---- */
+  const totals = () => {
+    const sub = cart.reduce((s, i) => {
+      const p = PRODUCTS.find(x => x.id === i.id);
+      return s + (p ? p.price * i.qty : 0);
+    }, 0);
+    const ship = cart.length === 0 ? 0 : (sub >= FREE_SHIP ? 0 : SHIP_FLAT);
+    return { sub, ship, tot: sub + ship };
+  };
+
+  /* ---- checkout summary ---- */
+  const co = $("#checkout");
+  const renderCoSummary = () => {
+    const ul = $("#coSummary");
+    if (!ul) return;
+    ul.innerHTML = cart.map(i => {
+      const p = PRODUCTS.find(x => x.id === i.id);
+      return `<li><span>${p.name} × ${i.qty}</span><span class="mono">${fmt(p.price * i.qty)}</span></li>`;
+    }).join("");
+    const t = totals();
+    $("#coSub").textContent = fmt(t.sub);
+    $("#coShip").textContent = t.ship ? fmt(t.ship) : (cart.length ? "FREE" : "—");
+    $("#coTot").textContent = fmt(t.tot);
+  };
+
+  /* ---- render cart ---- */
+  const renderCart = () => {
+    const count = cart.reduce((s, i) => s + i.qty, 0);
+    $("#cartCount").textContent = count;
+    const body = $("#cartItems");
+    if (!cart.length) {
+      body.innerHTML = `<div class="empty"><p>Your cart is empty.</p><p class="mono" style="font-size:.8rem">Free tracked shipping over $60</p></div>`;
+    } else {
+      body.innerHTML = cart.map(i => {
+        const p = PRODUCTS.find(x => x.id === i.id);
+        const tint = ({audio:"#EFEDE3",wearables:"#ECF2EC",home:"#F6EDE2",everyday:"#E9EFF4"})[p.tint];
+        return `
+        <div class="cItem" data-row="${i.id}">
+          <div class="thumb" style="background:${tint}">${p.art}</div>
+          <div>
+            <div class="cItem-name">${p.name}</div>
+            <div class="cItem-price">${fmt(p.price)}</div>
+            <div class="qty">
+              <button data-dec="${i.id}" aria-label="Decrease quantity">−</button>
+              <span>${i.qty}</span>
+              <button data-inc="${i.id}" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+          <button class="cItem-remove" data-remove="${i.id}">Remove</button>
+        </div>`;
+      }).join("") + `
+      <p class="ship-hint" style="margin-top:14px">
+        ${totals().sub >= FREE_SHIP
+          ? `<b>Free tracked shipping unlocked.</b>`
+          : `Add <b>${fmt(FREE_SHIP - totals().sub)}</b> more for free shipping.`}
+      </p>
+      <div class="freebar"><i style="width:${Math.min(100, (totals().sub / FREE_SHIP) * 100)}%"></i></div>`;
+    }
+    const t = totals();
+    $("#sumSub").textContent = fmt(t.sub);
+    $("#sumShip").textContent = cart.length ? (t.ship ? fmt(t.ship) : "FREE") : "—";
+    $("#sumTot").textContent = fmt(t.tot);
+    renderCoSummary();
+  };
+
+  /* ---- drawer open/close ---- */
+  const drawer = $("#drawer"), overlay = $("#overlay");
+  const openDrawer = () => { drawer.classList.add("show"); overlay.classList.add("show"); drawer.setAttribute("aria-hidden","false"); };
+  const closeDrawer = () => { drawer.classList.remove("show"); overlay.classList.remove("show"); drawer.setAttribute("aria-hidden","true"); };
+  $("#cartOpen").addEventListener("click", openDrawer);
+  $("#footCart").addEventListener("click", e => { e.preventDefault(); openDrawer(); });
+  $("#cartClose").addEventListener("click", closeDrawer);
+  overlay.addEventListener("click", closeDrawer);
+
+  /* ---- qty / remove ---- */
+  $("#cartItems").addEventListener("click", e => {
+    const inc = e.target.closest("[data-inc]");
+    const dec = e.target.closest("[data-dec]");
+    const rem = e.target.closest("[data-remove]");
+    if (inc) { find(inc.dataset.inc).qty++; save(); renderCart(); }
+    if (dec) {
+      const row = find(dec.dataset.dec);
+      row.qty--;
+      if (row.qty <= 0) cart = cart.filter(x => x !== row);
+      save(); renderCart();
+    }
+    if (rem) { cart = cart.filter(x => x.id !== rem.dataset.remove); save(); renderCart(); }
+  });
+
+  /* ---- checkout open/close ---- */
+  const closeCheckout = () => {
+    co.classList.remove("show");
+    document.body.style.overflow = "";
+  };
+  $("#checkoutBtn").addEventListener("click", () => {
+    if (!cart.length) { toast("Cart is empty"); return; }
+    renderCoSummary();
+    closeDrawer();
+    co.classList.add("show");
+    document.body.style.overflow = "hidden";
+  });
+  $("#coClose").addEventListener("click", closeCheckout);
+
+  /* ---- form validation ---- */
+  const showErr = (id, on) => $("#" + id).classList.toggle("show", on);
+  $("#coForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const email = $("#fEmail").value.trim();
+    let ok = true;
+    const emailOK = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+    showErr("errEmail", !emailOK); ok = ok && emailOK;
+    const nameOK = $("#fName").value.trim().length >= 2;
+    showErr("errName", !nameOK); ok = ok && nameOK;
+    const addrOK = $("#fAddr").value.trim().length >= 4;
+    showErr("errAddr", !addrOK); ok = ok && addrOK;
+    const cityOK = $("#fCity").value.trim().length >= 2;
+    showErr("errCity", !cityOK); ok = ok && cityOK;
+    const zipOK = $("#fZip").value.trim().length >= 2;
+    showErr("errZip", !zipOK); ok = ok && zipOK;
+    if (!ok) return;
+
+    const ord = "#LV-" + String(Math.floor(100000 + Math.random() * 899999));
+    $("#ordNo").textContent = ord;
+    $("#coForm").hidden = true;
+    $("#coSuccess").hidden = false;
+    renderCoSummary();
+  });
+  $("#successDone").addEventListener("click", () => {
+    cart = []; save(); renderCart(); closeCheckout();
+    $("#coForm").hidden = false;
+    $("#coSuccess").hidden = true;
+    $("#coForm").reset();
+    toast("Thanks! (demo order)");
+  });
+
+  /* ---- esc closes overlays ---- */
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") { closeDrawer(); closeCheckout(); }
+  });
+
+  /* ---- init ---- */
+  renderGrid();
+  renderCart();
+})();
+</script>
+</body>
+</html>
